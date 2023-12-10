@@ -1,0 +1,1165 @@
+> Graphical User Interface (GUI) > The current interface, where you can use your mouse to drag and drop and also get a graphical representation of all the things on your computer.
+
+> Command Line Interface (CLI) > What preceded GUI, which didn't have any graphical representations and everything needed to be done by explicitly typing out commands from your keyboard. it is essentially a text based input mechanism that allows you to control your computer using commands rather than the graphical options available within OS. Just as you can move around, open a folder, close a folder, copy and paste, move files, and many more with your mouse on a GUI computer, you should be able to similarly navigate around using the CLI. For your computer to take in the commands you type from your keyboard there has to be an interface where you type your commands. This interface is generally referred to as a terminal. So, when you are using the CLI, you have to open a terminal to type your commands and the shell will interpret and execute those commands for you.
+
+> Shell: A shell is a command-line interpreter that interprets the commands entered by the user and communicates with the operating system to execute them. It's responsible for handling the command line, executing programs, and managing files. is basically what is responsible for interpreting all the commands that you type and ensuring that you get the right response. It does this by taking commands from the keyboard and sending it to the operating system for execution.
+
+> Terminal: A terminal is a program that allows users to access the command-line interface. It's the window or application where you can type commands to communicate with the operating system. text I/O environment. On this window you'll be able to see the current working folder. While there are a number of different terminal emulators, they all do the same thing. They give us access to a shell session.
+
+> Shell Session: is a connection to a shell instance. So, when you open a terminal, you are essentially opening a shell session. The shell session is what allows you to type commands and get responses from the shell. The terminal is what allows you to open a shell session.
+
+> CMD => In the context of Windows operating systems, "cmd" refers to the Command Prompt, which serves as both the shell and the terminal. So, Command Prompt (cmd) functions both as the terminal (the window/interface) and the shell (the command interpreter).
+  >> Terminal: The Command Prompt window itself serves as the terminal. It provides the user interface for entering commands and viewing their output.
+  >> Shell: The Command Prompt also acts as the shell. It interprets the commands you type (like "dir" for directory listing or "cd" for changing directories) and communicates with the Windows operating system to execute them.
+
+> PowerShell => PowerShell is a more advanced and powerful command-line shell and scripting language developed by Microsoft. It provides more features, better scripting capabilities, and integration with .NET framework and Windows Management Instrumentation (WMI) compared to Command Prompt.
+
+> cmder => Portable console emulator for Windows that provides a more user-friendly command-line experience. It's an enhancement over the default Command Prompt, offering features like tabs, multiple command-line windows, and a more customizable interface.
+
+> Bash => Bash is a popular Unix shell and command language used in Linux distributions. It's a default shell for many Linux systems and is also available for Windows via tools like Windows Subsystem for Linux (WSL). In the context of Unix-like operating systems such as Linux, macOS, and others, "Bash" refers to the Bourne Again SHell, which is a shell an enhanced version of the original Unix shell program, sh.
+  >> The terminal (such as GNOME Terminal, Konsole, iTerm2, etc.) is the application/window that provides the interface where you interact with the command line.
+  >> Bash, or any other shell like Zsh, Ksh, tcsh etc., is the program running within that terminal, interpreting the commands you enter and interacting with the operating system to execute them.
+So, in summary, Bash is a shell, and the terminal is the program or window that allows you to use Bash and other shells to interact with the operating system through a command-line interface. Bash itself is not a terminal; it's a shell that operates within a terminal emulator.
+
+> The World Of Operating Systems: Most operating systems can be grouped into two families
+  >> The Microsoft NT descendants including Windows, Xbox OS, and Windows Phone/Mobile
+  >> Pretty much everything else has lineage going back to Unix, including Mac OS X, Linux, Android, Chrome OS, and even the PS4 OS
+
+> Unix was an operating system developed at Bell Labs in the mid 1960s. Many of the innovations and design choices the original Unix team have lived on 50+ years later, including the idea of multi-user operating systems and hierarchical file systems. Unix is the "grandfather" of many modern operating systems that we frequently use today.
+
+> The Unix Philosophy: In the early days of computers, operating systems were tightly tied to specific hardware. Unix decoupled the two and was easily portable to other hardware. Unix philosophy emphasizes modular software design and the creation of small individual programs that can be combined to perform complex tasks.
+  >> Write programs that do one thing and do it well.
+  >> Write programs to work together.
+  >> Write programs to handle text streams, because that is a universal interface.
+
+> True UNIX: Today the name "UNIX" is a trademark of a global consortium called The Open Group. They maintain a set of standards called the Single UNIX Specification, which describes the core commands, features, interfaces, utilities, and more that define a UNIX operating system. The Open Group will certify an operating system as fully UNIX compliant if it passes conformance tests. Companies must pay to be tested and must further pay to use the UNIX trademark.
+
+> Unix-Like: Many operating systems are based on the original UNIX operating systems and are compatible with the UNIX standards, but are NOT considered UNIX because they have not been certified by The Open Group. Often this is because of financial considerations or ethical objections. We call these operating systems Unix-like. They fully or mostly meet the specification but cannot legally use the UNIX name.
+
+> Free Software: The Free Software movement came about in the 1980s as a response to the proliferation of proprietary and restricted software. Think of "free speech" rather than "free as in zero price" The movement's philosophy is that the computers and software should not prevent cooperation between users, and instead should have the goal of liberating everyone in cyberspace. According to the movement's leader, Richard Stallman, "Users should have the freedom to run, copy, distribute, study, change, and improve the software"
+
+  >> GNU: Richard Stallman was a leader in the group of developers who aimed to create Free Software alternatives to Unix. In 1984 he began work on the GNU Project, with the goal of creating an operating system that included "everything useful that normally comes with a Unix system so that one could get along without any software that is not Free"
+
+  >> The Linux Kernel: Another developer, Linus Torvalds, was working on creating his own kernel known as Linux. The kernel is the part of an OS that facilitates interactions between hardware and software. At the time, many GNU "pieces" were complete, but it lacked a kernel. Torvalds combined his kernel with the existing GNU components to create a full operating system.
+
+  >> Kernel: A kernel is a computer program that forms the core of an operating system and manages critical tasks like: - memory management - task scheduling - managing hardware While a kernel is a critical piece, it is NOT the same as an operating system. An engine is the essential "core" of a car, but you can't drive an engine on its own!
+
+  >> Linux: Today, the term "Linux" refers both to the kernel created by Linus Torvalds AND all the software that is part of the Linux ecosystem. Some users feel strongly that the name GNU/Linux should be used instead, as it properly reflects the GNU Project's contributions.
+
+  >> GNU/Linux: Richard Stallman said "Calling the whole system "Linux" leads people to think that the system's development was started in 1991 by Linus Torvalds. That is what most users seem to think. The occasional few users that do know about the GNU Project often think we played a secondary role — for example, they say to me, 'Of course I know about GNU — GNU developed some tools that are part of Linux"
+
+  >> Linux Distributions: The Linux Kernel itself is not a full-blown operating system. When people talk about a Linux-based operating system, they are referring to Linux distributions. Typically, a Linux distribution bundles together the Linux kernel, GNU tools, documentation, a package manager, a window system, and desktop environment. There are nearly 1000 Linux distros available. Some of the more popular ones includes Fedora, Ubunutu, Debian, and Slackware.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+Windows
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+cd/chdir
+--------
+
+// you can change directories within a command prompt window using the CD commands. This can be used either with a
+relative path or an absolute path. A relative path is the location of a file/folder relative to the current working
+directory. An absolute path is the full path to a file or folder, It must be enclosed within speech marks if it has any
+spaces in the real world, it's normally good practice to include all absolute paths in speech marks anyway
+
+- cd/chdir 'dirname' => to access a specific dir inside current dir
+
+- cd/chdir .. => back one step
+
+- cd/chdir + tab => explore dirs inside current dir
+
+- cd/chdir 'txt' + Tab => get the dirs starts with 'txt' - if there is only one dir starts with this 'txt' it will
+change the dir to it instantly
+
+- cd/chdir \ => back to root [C-D-E-....]
+
+- cd/chdir C:\'dirname'\'dirname' => to navigate directly to a specific dir in windows
+
+- D: => to navigate directly to D drive
+
+------------------------------------------------------------------------------------------
+
+start .
+-------
+
+open file explorer window for the current directory
+
+------------------------------------------------------------------------------------------
+
+
+md/mkdir
+--------
+
+- md/mkdir 'dirname' => make new dir in current dir
+
+- md/mkdir 'dirname' 'dirname' => make multiple dirs in current dir
+
+- md/mkdir "dir name" => to make one dir with space
+
+- md/mkdir ..\'dirname' => make new dir in father dir
+
+- md/mkdir C:\'dirname' => make new dir in any place in windows
+
+------------------------------------------------------------------------------------------
+
+// cls/clear => clear commands i had wrote - windows-linux/mac
+
+// dir/ls => list files and folders in current dir or in full dir path - windows-linux/mac
+
+- dir C:\ => would start at the root of the C drive unless files and folders at the root
+
+- dir C:\ /s => view files and folders and directly levels below this - this operation will take time to be executed
+(larg amount of data)
+
+- dir C:\ /s | more => show as a previous command but we use space key or enter key to show more - in order to display
+the information in readable chunks.
+
+- dir C:\ /s > 'relative or absolute path' => file with output - Note that when you use an output file on A commands,
+the output does not appear on the screen within the command prompt window.
+
+- dir C:\ /s /ahs => show only hidden and system files
+
+------------------------------------------------------------------------------------------
+
+move/mv [w/l] => rename-move
+----------------------------
+// dir can not be moved if you are in it already meaning that you'll need to change directory to another location before
+the directory can be moved.
+
+- move/mv 'dirname1' 'dirname2' => (rename) dirname1 to dirname2 if dirname2 dose not exist in current path, but if it
+is exist OS will move dirname1 to dirname2
+
+- move/mv 'dirname' ..\ => move it to back dir
+
+- move/mv 'dirname' .. => move it to back dir
+
+- move/mv 'dirname' \ => move it to root
+
+------------------------------------------------------------------------------------------
+
+rename/ren
+----------
+// current working dir only
+
+- rename/ren 'dirname1' 'dirname2' => (rename) dirname1 to dirname2
+
+------------------------------------------------------------------------------------------
+
+copy
+----
+
+- cp -r dirname1' 'dirname2' => create dirname2 if dose not exist then copy dirname1 and its content to dirname2
+
+------------------------------------------------------------------------------------------
+
+delete
+------
+// dir can not be deleted if you are in it
+
+del 'filename' => for deleting files
+
+rmdir 'dirname' /s /q => remove dir and its content - /s this switch stands for subfolders and the /q option is a
+suppressing deleting confirmation prompts
+rmdir "'dirname'" /s /q =>
+
+rmdir 'dirname' => remove empty dir only
+
+rm -r 'dirname' => remove dir and its content
+
+rm -d 'dirname' => remove empty dir only
+
+------------------------------------------------------------------------------------------
+
+concat
+------
+
+- cat osama.txt => show file content
+
+- cat osama1.txt osama2.txt => show both files content
+
+- cat * => show content of all files in current dir - * = wild card
+
+- cat osama1.txt > osama2.txt => create file if not exist then append text to it - if file already exist it will
+override
+
+- cat osama1.txt >> osama2.txt => create file if not exist then put text to it - if file already exist it will append
+txt to the file not override
+
+------------------------------------------------------------------------------------------
+
+print
+-----
+
+- echo "txt" => print txt to terminal
+
+- echo txt > osama.txt => create file if not exist then append text to it - if file already exist it will override
+
+- echo txt >> osama.txt => create file if not exist then append text to it - if file already exist it will append txt to
+the file not override
+
+------------------------------------------------------------------------------------------
+
+type => show file content
+----
+
+type 'filname.extension'
+
+------------------------------------------------------------------------------------------
+
+grep => global regular expression print
+---------------------------------------
+
+- grep "txt" 'dirname' => search in dirname and show the result
+
+- grep "txt" -r => search in subdirs and its contents and show the result
+
+- grep "txt" -r 'dirname' => search in dirname and its contents and show the result
+
+- grep "txt" -r -l => list the files contains "txt"
+
+- grep "txt" 'path' => list the files contains "txt" in this 'path'
+
+------------------------------------------------------------------------------------------
+
+// file: kind of file (content not extension)
+
+// man: manuall of command - unix
+
+// Ctrl + c: stop operations
+
+// tree /a: view the structure of files and directories on a volume in a tree like structure, with files appearing as
+branches underneath folders.
+- tree C:\ | more
+
+// osk: on screen keyboard
+
+// tasklist: windows running apps and services (like task manager)
+
+// alias tl=tasklist: make alias to command
+
+// 'cl' && 'cl': run two commands in one line
+
+// whoami: my user
+
+// systeminfo: everything about system
+
+// 'cl' > 'filename': create file and append the result of command to the file
+
+// 'cl' | clip: copy results of command to clipboard
+
+------------------------------------------------------------------------------------------
+
+cl --help => just help
+
+cl /? => full manual
+
+> => forward bracket
+
+------------------------------------------------------------------------------------------
+
+// file system: determines how files and folders are organized on a hard disk, meaning that there can be only one file
+system per desk
+
+// Some examples of common file systems include FAT32, NTFS and more recently, ReFS. FAT32 is a legacy file system
+mostly used on older drives and can only support volume sizes of up to 32 gigabytes. NTFS is the most commonly used file
+system today and is able to handle all volume sizes available. ReFS is not used that often
+
+// volume: on a disk are normally denoted by a driver
+
+------------------------------------------------------------------------------------------
+
+date & time
+-----------
+
+- date => show the current date and ask you for new date
+
+- date 20-02-20 => set date
+
+- time => show the current time and ask you for new time
+
+- time 21:40 => set time
+
+- date /t => show the current date without asking you for new date
+
+- time /t => show the current time without asking you for new time
+
+- date /t && time /t => show current date and time
+
+- date 20-02-20 && time 21:45 => set date and time
+
+- tzutil => set time zone
+
+------------------------------------------------------------------------------------------
+
+diskpart
+--------
+
+- diskpart => this command must run as administrator - it will show some of information about diskpart
+
+- diskpart ? => help
+
+- diskpart list (disk - partition - volume - vdisk) => info about disk structure
+// The list partition command displays all of the raw partitions available on a disk with information including the
+partition number, type size and offset values.
+// The list volume commom displays the formatted volumes contained on the partitions, along with information such as a
+drive letter, this global file system, type size status and any thoughts on the drive
+
+------------------------------------------------------------------------------------------
+
+groub policy
+------------
+
+// GPupdate commands, as its name suggests, downloads the latest version of all relevant group policies and apply them
+to a machine.
+// GPresult commands outputs data concerning the policies currently applied to the machine
+
+------------------------------------------------------------------------------------------
+
+shutdown => This command is capable of shutting down, restarting and logging off the machine.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+linux
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+> Linux-like command line environment for Windows: Cygwin "Get that Linux feeling - on Windows" - https://www.cygwin.com
+
+> The first thing we should see is a shell prompt that contains our user name and the name of the machine followed by a $ or #. The shell prompt is a sign that the shell is ready to accept commands. The $ indicates that the shell is currently operating as a regular user and not as the superuser.
+
+> If the last character of your shell prompt is # rather than $, you are operating as the superuser. This means that you have administrative privileges. This can be dangerous, since you are able to delete or overwrite any file on the system. Unless you absolutely need administrative privileges, do not operate as the superuser.
+
+> Like Windows, the files on a Linux system are arranged in what is called a hierarchical directory structure. This means that they are organized in a tree-like pattern of directories (called folders in other systems), which may contain files and subdirectories. The first directory in the file system is called the root directory. The root directory contains files and subdirectories, which contain more files and subdirectories and so on and so on. One important difference between Windows and Unix-like operating systems such as Linux is that Linux does not employ the concept of drive letters. While Windows drive letters split the file system into a series of different trees (one for each device), Linux always has a single tree. Different storage devices may be different branches of the tree, but there is always just a single tree.
+
+> / and ~
+
+  >> amr@amr-Work-Ubuntu64bit:~$: This prompt indicates that the user (amr) is currently located in their home directory (~ is a shorthand notation for the user's home directory). When you see this prompt, it means you are working within the user's home directory.
+
+  >> amr@amr-Work-Ubuntu64bit:/$: This prompt, on the other hand, indicates that the user (amr) is currently at the root directory (/) of the file system. The root directory is the top-level directory in a Unix-like file system, and it contains all other directories, files, and system-related information.
+
+  ~ represents the user's home directory.
+  / represents the root directory of the file system.
+
+> man => command manual
+  The NAME will summarize what the command is doing. As it is usually super short, you might want to look at DESCRIPTION (bellow) if ever it does not gives clear enough information. it consists of several sections [man man] for display it. not every command has a manual page, usually shell built-ins don't have one.
+  The SYNOPSIS will help you to understand the structure of the command
+  A shell command usually have this format: command options arguments
+    Options inside [] are optional
+    The string without [] are mandatory
+  man -k term => searchin for this term in the manual sections
+  man 5 term => display section of term
+
+> command format => Most commands operate like this: command -options arguments. where command is the name of the command, -options is one or more adjustments to the command's behavior, and arguments is one or more "things" upon which the command operates. this order is not must, there commands can be written as commans arg -opt. command are case sensitive.
+
+  >> commands options => Options are used to modify the behavior of the command. Options are specified by a dash followed by a single letter or a double dash followed by a word. Options are usually case sensitive. Some commands allow options to be combined. For example, the command ls -l -a can be written as ls -la. options in long format can not be combined like short one. Options can appear in any order. some of options require arguments like [cal -A 1].
+
+  >> commands arguments => Arguments are the "things" upon which the command operates. Most commands require at least one argument. Some commands require more than one argument. Arguments can be file names, directory names, user names, host names, strings of text, numbers, etc. The type of argument required depends on the command. Arguments are separated by spaces. If an argument contains spaces, it must be enclosed in quotation marks.
+
+> Commands
+
+  awk # pattern scanning and processing language
+  basename # strip directory and suffix from filenames
+  bg # resumes suspended jobs without bringing them to the foreground
+  cat # print files
+  cd # change the shell working directory.
+  chmod # change file mode
+  chown # change file owner and group
+  crontab # maintain crontab files
+  curl # transfer a URL
+  cut # remove sections from each line of files
+  date # display or set date and time
+  dig # DNS lookup utility
+  df # report file system disk space usage
+  diff # compare files line by line
+  du # estimate file space usage
+  echo # display a line of text
+  find # search for files in a directory hierarchy
+  fg # resumes suspended jobs and bring them to the foreground
+  grep # print lines matching a pattern
+  kill # send a signal to a process
+  less # read file with pagination
+  ln # create links
+  ls # list directory contents
+  lsb_release # print distribution-specific information
+  lsof # list open files
+  mkdir # create
+  mv # move files
+  nc # arbitrary TCP and UDP connections and listens
+  netstat # print network connections, routing tables, interface statistics...
+  nice # execute a utility with an altered scheduling priority
+  nproc # print the number of processing units available
+  passwd # change user password
+  pgrep # look up processes based on name and other attributes
+  pkill # send signal to processes based on name and other attributes
+  printenv # print all or part of environment
+  pwd # print name of current/working directory
+  top # display Linux processes
+  tr # translate or delete characters
+  ps # report a snapshot of the current processes
+  rm # remove files or directories
+  rmdir # remove directories
+  rsync # remote file copy
+  scp # secure copy (remote file copy program)
+  sed # stream editor for filtering and transforming text
+  sleep # suspend execution for an interval of time
+  sort # sort lines of text file
+  ssh # OpenSSH SSH client (remote login program)
+  ssh-keygen # SSH key generation, management and conversion
+  su # substitute user identity
+  sudo # execute a command as another user
+  tail # output the last part of files
+  tar # manipulate archives files
+  tr # translate or delete characters
+  uname # Print operating system name
+  uniq # report or omit repeated lines
+  uptime # show how long system has been running
+  w # Show who is logged on and what they are doing
+  whereis # locate the binary, source, and manual page files for a command
+  which # locate a command
+  wc # print newline, word, and byte counts for each file
+  xargs # build and execute command lines from standard input
+  | # redirect standard output to another command
+  > # redirect standard output
+  < # redirect standard input
+  & # send process to background
+
+> Shortcuts
+
+  CTRL+A # go to beginning of line
+  CTRL+B # moves backward one character
+  CTRL+C # stops the current command
+  CTRL+D # deletes one character backward or logs out of current session
+  CTRL+E # go to end of line
+  CTRL+F # moves forward one character
+  CTRL+G # aborts the current editing command and ring the terminal bell
+  CTRL+K # deletes (kill) forward to end of line
+  CTRL+L # clears screen and redisplay the line
+  CTRL+N # next line in command history
+  CTRL+R # searches in your command history
+  CTRL+T # transposes two characters
+  CTRL+U # kills backward to the beginning of line
+  CTRL+W # kills the word behind the cursor
+  CTRL+Y # retrieves last deleted string
+  CTRL+Z # stops the current command, resume with fg in the foreground or bg in the background
+
+> pwd => print working directory
+
+  >> Since the command line interface cannot provide graphic pictures of the file system structure, we must have a different way of representing it. To do this, think of the file system tree as a maze, and that we are standing in it. At any given moment, we are located in a single directory. Inside that directory, we can see its files and the pathway to its parent directory and the pathways to the subdirectories of the directory in which we are standing. The directory we are standing in is called the working directory. To see the name of the working directory, we use the pwd command.
+    username@machinename path $ pwd
+    /home/me
+  When we first log on to our Linux system, the working directory is set to our home directory. This is where we put our files. On most systems, the home directory will be called /home/user_name, but it can be anything according to the whims of the system administrator.
+
+> cd => change directory
+
+  >> To change the working directory (where we are standing in the maze) we use the cd command. To do this, we type cd followed by the pathname of the desired working directory. A pathname is the route we take along the branches of the tree to get to the directory we want. Pathnames can be specified two different ways; absolute pathnames or relative pathnames.
+
+  >> An absolute pathname begins with the root directory and follows the tree branch by branch until the path to the desired directory or file is completed. For example, there is a directory on your system in which most programs are installed. The pathname of the directory is /usr/bin. This means from the root directory (represented by the leading slash in the pathname) there is a directory called "usr" which contains a directory called "bin".
+    me@linuxbox me]$ cd /usr/bin
+    me@linuxbox bin]$
+  Notice how the shell prompt has changed? As a convenience, it is usually set up to display the name of the working directory.
+
+  >> Where an absolute pathname starts from the root directory and leads to its destination, a relative pathname starts from the working directory. To do this, it uses a couple of special notations to represent relative positions in the file system tree. These special notations are "." (dot) and ".." (dot dot).
+    The "." notation refers to the working directory itself and the ".." notation refers to the working directory's parent directory. Here is how it works. Let's change the working directory to /usr/bin again:
+      me@linuxbox me]$ cd /usr/bin
+      me@linuxbox bin]$ pwd
+      /usr/bin
+    O.K., now let's say that we wanted to change the working directory to the parent of /usr/bin which is /usr. We could do that two different ways. First, with an absolute pathname:
+      me@linuxbox bin]$ cd /usr
+      me@linuxbox usr]$ pwd
+      /usr
+    Or, with a relative pathname:
+      me@linuxbox bin]$ cd ..
+      me@linuxbox usr]$ pwd
+      /usr
+    Two different methods with identical results. Which one should we use? The one that requires the least typing!
+    Likewise, we can change the working directory from /usr to /usr/bin in two different ways. First using an absolute pathname:
+      me@linuxbox usr]$ cd /usr/bin
+      me@linuxbox bin]$ pwd
+      /usr/bin
+    Or, with a relative pathname:
+      me@linuxbox usr]$ cd ./bin
+      me@linuxbox bin]$ pwd
+      /usr/bin
+    Now, there is something important that we must point out here. In most cases, we can omit the "./". It is implied. Typing:
+      me@linuxbox usr]$ cd bin
+    or
+      me@linuxbox usr]$ cd bin/
+    would do the same thing. In general, if we do not specify a pathname to something, the working directory will be assumed. There is one important exception to this rule.
+      - In Bash, when you don't specify a pathname for a command, the shell assumes the command operates in the current working directory. However, there is an exception for the cd command. If you don't specify a pathname and use cd alone, it doesn't default to the current directory; instead, it navigates to the user's home directory. This behavior is specific to the cd command and is an exception to the general rule where omitting a pathname implies the current directory.
+      - A related shortcut is to type cd ~user_name. In this case, cd will change the working directory to the home directory of the specified user.
+      - Typing cd - changes the working directory to the previous one.
+
+> file names
+
+  >> File names that begin with a period character are hidden. This only means that ls will not list them unless we say ls -a. When your account was created, several hidden files were placed in your home directory to configure things for your account. Later on we will take a closer look at some of these files to see how you can customize our environment. In addition, some applications will place their configuration and settings files in your home directory as hidden files.
+
+  >> File names in Linux, like Unix, are case sensitive. The file names "File1" and "file1" refer to different files.
+
+  >> Linux has no concept of a "file extension" like Windows systems. You may name files any way you like. However, while Linux itself does not care about file extensions, many application programs do.
+
+  >> Though Linux supports long file names which may contain embedded spaces and punctuation characters, limit the punctuation characters to period, dash, and underscore. Most importantly, do not embed spaces in file names. If you want to represent spaces between words in a file name, use underscore characters. You will thank yourself later.
+
+> ls => list files and directories in the current working directory
+
+  >> commands
+    ls	              List the files in the working directory
+    ls /bin - ls bin  List the files in the /bin directory (subdirectory of the working directory)
+    ls /usr/bin	      List the files in the /usr/bin directory (subdirectory of subdirectory of the working directory)
+    ls -l	            List the files in the working directory in long format
+    ls -n             List the files in the working directory in long format with user and group IDs displayed numerically
+    ls -a             List all files in the working directory, including hidden files
+    ls -l /etc /bin	  List the files in the /bin directory and the /etc directory in long format
+    ls -la ..	        List all files (even ones with names beginning with a period character, which are normally hidden) in the parent of the working directory in long format
+    ls -lt	          List the files in the working directory in long format and sort by time modified (most recently modified first)
+    ls -ltr           List the files in the working directory in long format and sort by time modified (least recently modified first)
+    ls -R	            List the files in the working directory and all subdirectories recursively
+    ls -amp           lists all the files and directories of the current directory, separated by commas (,). Directory names should end with a slash (/). Files and directories starting with a dot (.) should be listed
+
+  >> long format
+      -rw-------   1 me       me            576 Apr 17  2019 weather.txt
+      drwxr-xr-x   6 me       me           1024 Oct  9  2019 web_page
+      -rw-rw-r--   1 me       me         276480 Feb 11 20:41 web_site.tar
+      -rw-------   1 me       me           5743 Dec 16  2018 xmas_file.txt
+    - File Name: The name of the file or directory.
+    - Modification Time: The last time the file was modified. If the last modification occurred more than six months in the past, the date and year are displayed. Otherwise, the time of day is shown.
+    - Size: The size of the file in bytes.
+    - Group: The name of the group that has file permissions in addition to the file's owner.
+    - Owner: The name of the user who owns the file.
+    - File Permissions: A representation of the file's access permissions. The first character is the type of file. A "-" indicates a regular (ordinary) file. A "d" indicates a directory. The second set of three characters represent the read, write, and execution rights of the file's owner. The next three represent the rights of the file's group, and the final three represent the rights granted to everybody else.
+
+> open . => open file explorer window for the current directory
+  open bin - open /bin => open file explorer window for the bin directory
+  open .. => open file explorer window for the parent directory
+  open ./user/bin - open /user/bin => open file explorer window for bin directory in user directory
+
+> less => view text files
+
+  >> Controlling less
+  Once started, less will display the text file one page at a time. We can use the Page Up and Page Down keys to move through the text file. To exit less, we type "q". Here are some commands that less will accept:
+    Page Up or b	      Scroll back one page
+    Page Down or space	Scroll forward one page
+    G	                  Go to the end of the text file
+    1G	                Go to the beginning of the text file
+    /characters	        Search forward in the text file for an occurrence of the specified characters
+    n	                  Repeat the previous search
+    h	                  Display a complete list less commands and options
+    q	                  Quit
+
+  >> What is "text"?
+    - There are many ways to represent information on a computer. All methods involve defining a relationship between the information and some numbers that will be used to represent it. Computers, after all, only understand numbers and all data is converted to numeric representation.
+    - Some of these representation systems are very complex (such as compressed multimedia files), while others are rather simple. One of the earliest and simplest is called ASCII text. ASCII (pronounced "As-Key") is short for American Standard Code for Information Interchange. This is a simple encoding scheme that was first used on Teletype machines to map keyboard characters to numbers.
+    - Text is a simple one-to-one mapping of characters to numbers. It is very compact. Fifty characters of text translates to fifty bytes of data. Throughout a Linux system, many files are stored in text format and there are many Linux tools that work with text files. Even Windows systems recognize the importance of this format. The well-known NOTEPAD.EXE program is an editor for plain ASCII text files.
+
+> file => classify a file's contents
+
+  >> As we wander around our Linux system, it is helpful to determine what kind of data a file contains before we try to view it. This is where the file command comes in. file will examine a file and tell us what kind of file it is.
+
+  >> The file program can recognize most types of files, such as:
+    File Type	                        Description	                                                      Viewable as text?
+    ASCII text	                      The name says it all	                                            yes
+    Bourne-Again shell script text	  A bash script	                                                    yes
+    ELF 64-bit LSB executable	        An executable binary program	                                    no
+    ELF 64-bit LSB shared object	    A shared library	                                                no
+    GNU tar archive	                  A tape archive file. A common way of storing groups of files.	    no, use tar tvf to view listing.
+    gzip compressed data	            An archive compressed with gzip	                                  no
+    HTML document text	              A web page	                                                      yes
+    JPEG image data	                  A compressed JPEG image	                                          no
+    PostScript document text	        A PostScript file	                                                yes
+    Zip archive data	                An archive compressed with zip	                                  no
+  While it may seem that most files cannot be viewed as text, a surprising number can be. This is especially true of the important configuration files. During our adventure we will see that many features of the operating system are controlled by text configuration files and shell scripts. In Linux, there are no secrets!
+
+> Directory	Description
+
+  [/]	=> The root directory where the file system begins. The root directory will probably contain only subdirectories.
+
+  [/boot]	=> This is where the Linux kernel and boot loader files are kept. The kernel is a file called vmlinuz.
+
+  [/etc]	=> The /etc directory contains the configuration files for the system. All of the files in /etc should be text files. Some points of interest are:
+    - /etc/passwd
+    The passwd file contains the essential information for each user. This is where user accounts are defined.
+    - /etc/fstab
+    The fstab file contains a table of devices that get mounted when the system boots. This file defines the system's disk drives.
+    - /etc/hosts
+    This file lists the network host names and IP addresses that are intrinsically known to the system.
+    - /etc/init.d
+    This directory contains the scripts that start various system services at boot time.
+
+  [/bin, /usr/bin] =>	These two directories contain most of the programs for the system. The /bin directory has the essential programs that the system requires to operate, while /usr/bin contains applications for the system's users.
+
+  [/sbin, /usr/sbin] =>	The sbin directories contain programs for system administration, mostly for use by the superuser.
+
+  [/usr] =>	The /usr directory contains a variety of things that support user applications. Some highlights:
+    - /usr/share/X11
+    Support files for the X Window system
+    - /usr/share/dict
+    Dictionaries for the spelling checker. Yes, Linux comes with a spelling checker. See look and aspell.
+    - /usr/share/doc
+    Various documentation files in a variety of formats.
+    - /usr/share/man
+    The man pages are kept here.
+
+  [/usr/local] =>	/usr/local and its subdirectories are used for the installation of software and other files for use on the local machine. What this really means is that software that is not part of the official distribution (which usually goes in /usr/bin) goes here. When you find interesting programs to install on your system, they should be installed in one of the /usr/local directories. Most often, the directory of choice is /usr/local/bin.
+
+  [/var] =>	The /var directory contains files that change as the system is running. This includes:
+    - /var/log
+    Directory that contains log files. These are updated as the system runs. It's a good idea to view the files in this directory from time to time, to monitor the health of your system.
+    - /var/spool
+    This directory is used to hold files that are queued for some process, such as mail messages and print jobs. When a user's mail first arrives on the local system (assuming it has local mail, a rare occurrence on modern machines that are not mail servers), the messages are first stored in /var/spool/mail
+
+  [/lib] =>	The shared libraries (similar to DLLs in that other operating system) are kept here.
+
+  [/home] =>	/home is where users keep their personal work. In general, this is the only place users are allowed to write files. This keeps things nice and clean
+
+  [/root] =>	This is the superuser's home directory.
+
+  [/tmp] =>	/tmp is a directory in which programs can write their temporary files.
+
+  [/dev] =>	The /dev directory is a special directory, since it does not really contain files in the usual sense. Rather, it contains devices that are available to the system. In Linux (like Unix), devices are treated like files. You can read and write devices as though they were files. For example /dev/fd0 is the first floppy disk drive, /dev/sda is the first hard drive. All the devices that the kernel understands are represented here.
+
+  [/proc] =>	The /proc directory is also special. This directory does not contain files. In fact, this directory does not really exist at all. It is entirely virtual. The /proc directory contains little peep holes into the kernel itself. There are a group of numbered entries in this directory that correspond to all the processes running on the system. In addition, there are a number of named entries that permit access to the current configuration of the system. Many of these entries can be viewed. Try viewing /proc/cpuinfo. This entry will tell you what the kernel thinks of the system's CPU.
+
+  [/media] =>	Finally, we come to /media, a normal directory which is used in a special way. The /media directory is used for mount points. As we learned in the second lesson, the different physical storage devices (like hard disk drives) are attached to the file system tree in various places. This process of attaching a device to the tree is called mounting. For a device to be available, it must first be mounted. When your system boots, it reads a list of mounting instructions in the /etc/fstab file, which describes which device is mounted at which mount point in the directory tree. This takes care of the hard drives, but we may also have devices that are considered temporary, such as optical disks and USB storage devices. Since these are removable, they do not stay mounted all the time. The /media directory is used by the automatic device mounting mechanisms found in modern desktop oriented Linux distributions. To see what devices and mount points are used, type mount.
+
+> ln => create symbolic links
+
+  ln -s /bin/ls __ls__
+
+  >> During your tour, you probably noticed a strange kind of directory entry, particularly in the /lib directory. When listed with ls -l, you might have seen something like this:
+    lrwxrwxrwx     25 Jul  3 16:42 System.map -> /boot/System.map-4.0.36-3
+    -rw-r--r-- 105911 Oct 13  2018 System.map-4.0.36-0.7
+    -rw-r--r-- 105935 Dec 29  2018 System.map-4.0.36-3
+    -rw-r--r-- 181986 Dec 11  2019 initrd-4.0.36-0.7.img
+    -rw-r--r-- 182001 Dec 11  2019 initrd-4.0.36.img
+    lrwxrwxrwx     26 Jul  3 16:42 module-info -> /boot/module-info-4.0.36-3
+    -rw-r--r--  11773 Oct 13  2018 module-info-4.0.36-0.7
+    -rw-r--r--  11773 Dec 29  2018 module-info-4.0.36-3
+    lrwxrwxrwx     16 Dec 11  2019 vmlinuz -> vmlinuz-4.0.36-3
+    -rw-r--r-- 454325 Oct 13  2018 vmlinuz-4.0.36-0.7
+    -rw-r--r-- 454434 Dec 29  2018 vmlinuz-4.0.36-3
+  - Notice the files, System.map, module-info and vmlinuz. See the strange notation after the file names?
+  - Files such as this are called symbolic links. Symbolic links are a special type of file that points to another file. With symbolic links, it is possible for a single file to have multiple names. Here's how it works: Whenever the system is given a file name that is a symbolic link, it transparently maps it to the file it is pointing to.
+  - Just what is this good for? This is a very handy feature. Let's consider the directory listing above (which is the /boot directory of an old system). This system has had multiple versions of the Linux kernel installed. We can see this from the files vmlinuz-4.0.36-0.7 and vmlinuz-4.0.36-3. These file names suggest that both version 4.0.36-0.7 and 4.0.36-3 are installed. Because the file names contain the version it is easy to see the differences in the directory listing. However, this would be confusing to programs that rely on a fixed name for the kernel file. These programs might expect the kernel to simply be called "vmlinuz". Here is where the beauty of the symbolic link comes in. By creating a symbolic link called vmlinuz that points to vmlinuz-4.0.36-3, we have solved the problem.
+
+> Wildcards => allow you to select filenames based on patterns of characters
+
+  >> Wildcards
+    *	              Matches any characters
+    ?	              Matches any single character
+    [characters]	  Matches any character that is a member of the set characters. The set of characters may also be expressed as a POSIX character class such as one of the following:
+      [:alnum:]	Alphanumeric characters
+      [:alpha:]	Alphabetic characters
+      [:digit:]	Numerals
+      [:upper:]	Uppercase alphabetic characters
+      [:lower:]	Lowercase alphabetic characters
+    [!characters]	  Matches any character that is not a member of the set characters
+
+  >> Using wildcards, it is possible to construct very sophisticated selection criteria for filenames. Here are some examples of patterns and what they match:
+    *	                                All filenames
+    g*	                              All filenames that begin with the character "g"
+    b*.txt	                          All filenames that begin with the character "b" and end with the characters ".txt"
+    Data???	                          Any filename that begins with the characters "Data" followed by exactly 3 more characters
+    [abc]*	                          Any filename that begins with "a" or "b" or "c" followed by any other characters
+    [[:upper:]]*	                    Any filename that begins with an uppercase letter. This is an example of a character class.
+    BACKUP.[[:digit:]][[:digit:]]	    Another example of character classes. This pattern matches any filename that begins with the characters "BACKUP." followed by exactly two numerals.
+    *[![:lower:]]	                    Any filename that does not end with a lowercase letter.
+  We can use wildcards with any command that accepts filename arguments.
+
+> cp => The cp program copies files and directories. In its simplest form, it copies a single file:
+  username@machinename path $ cp file1 file2
+  It can also be used to copy multiple files (and/or directories) to a different directory:
+  username@machinename path $ cp file... directory
+  A note on notation: ... signifies that an item can be repeated one or more times.
+  Other useful examples of cp and its options include:
+    cp file1 file2	            Copies the contents of file1 into file2. If file2 does not exist, it is created; otherwise, file2 is silently overwritten with the contents of file1.
+    cp -i file1 file2	          Like above however, since the "-i" (interactive) option is specified, if file2 exists, the user is prompted before it is overwritten with the contents of file1.
+    cp file1 dir1	              Copy the contents of file1 (into a file named file1) inside of directory dir1.
+    cp -R dir1 dir2	            Copy the contents of the directory dir1. If directory dir2 does not exist, it is created. Otherwise, it creates a directory named dir1 within directory dir2.
+    cp -nu *.html ..            Copy all files ending in ".html" in the current directory to the parent of the working directory. The "-n" option do not overwrite an existing file (overrides a previous  -i option). The "-u" option copy only when the SOURCE file is newer than  the  destination file or when the destination file is missing.
+
+> mv => The mv command moves or renames files and directories depending on how it is used. It will either move one or more files to a different directory, or it will rename a file or directory. To rename a file, it is used like this:
+  username@machinename path $ mv filename1 filename2
+  To move files (and/or directories) to a different directory:
+  username@machinename path $ mv file... directory
+    mv file1 file2	            If file2 does not exist, then file1 is renamed file2. If file2 exists, its contents are silently replaced with the contents of file1.
+    mv -i file1 file2	          Like above however, since the "-i" (interactive) option is specified, if file2 exists, the user is prompted before it is overwritten with the contents of file1.
+    mv file1 file2 dir1	        The files file1 and file2 are moved to directory dir1. If dir1 does not exist, mv will exit with an error.
+    mv dir1 dir2	              If dir2 does not exist, then dir1 is renamed dir2. If dir2 exists, the directory dir1 is moved within directory dir2.
+
+> rm => The rm command removes (deletes) files and directories.
+  username@machinename path $ rm file...
+  Using the recursive option (-r), rm can also be used to delete directories:
+  username@machinename path $ rm -r directory...
+    rm file1 file2	      Delete file1 and file2.
+    rm -i file1 file2	    Like above however, since the "-i" (interactive) option is specified, the user is prompted before each file is deleted.
+    rm -r dir1 dir2	      Directories dir1 and dir2 are deleted along with all of their contents.
+    rm -rf dir1 dir2	    Like above however, since the "-f" (force) option is specified, no prompts are displayed.
+  Be careful with rm!
+    Linux does not have an undelete command. Once you delete something with rm, it's gone. You can inflict terrific damage on your system with rm if you are not careful, particularly with wildcards. Before you use rm with wildcards, try this helpful trick: construct your command using ls instead. By doing this, you can see the effect of your wildcards before you delete files. After you have tested your command with ls, recall the command with the up-arrow key and then substitute rm for ls in the command.
+
+> touch => The touch command is used to create a new, empty file.
+  touch files... => Create one or more files.
+  touch pets/horses/mero.txt => Create the file mero.png in the directory pets/horses if it does not exist. If it does exist, update its modification time to the current time.
+
+> rmdir => The rmdir command removes empty directories. To use it, you simply type:
+  rmdir directory...
+  rmdir dir1 dir2 => Remove directories dir1 and dir2 if they are empty.
+  rmdir -p dir1/dir2/dir3 => Remove directory dir3 and its parent directories dir2 and dir1 if they are empty.
+  rmdir dir4 => Remove directory dir4 if it is empty. If dir4 is not empty, rmdir will exit with an error.
+
+> mkdir => The mkdir command is used to create directories. To use it, you simply type: The mkdir command gives rwx (read, write, and execute) permissions for the current user only by default
+  mkdir directory...
+  mkdir -p dir1/dir2/dir3 => Create directory dir3 and its parent directories dir2 and dir1 if they do not exist.
+    -p: This option is particularly useful when you want to create a nested directory structure and you're not sure whether the intermediate directories already exist. It avoids errors and ensures that the full path is created as needed.
+  mkdir /tmp/dir1 => Create the directory dir1 in the /tmp directory.
+  mkdir -m 751 dirname => make dir and give it specific permissions.
+
+> sed => The sed command is a stream editor. It accepts text as input, performs an operation or set of operations on the text, and outputs the modified text. The sed command is useful in a number of different contexts, including scripts, processing text files, and as a filter within a pipeline. The sed command is similar to the ed command except that it performs editing operations on the entire file at once. The ed command, on the other hand, performs editing operations on a line-by-line basis.
+  sed -i 's/echo "ALX"/echo "ALX School is so cool!"/' bash/alx => Replace the string echo "ALX" with echo "ALX School is so cool!" in the file bash/alx. The -i option tells sed to edit the file in place.
+
+> head => The head command is used to display the first few lines of a text file.
+  head file => Display the first ten lines of file.
+  head -n 5 file => Display the first five lines of file.
+  head -c 5 file => Display the first five characters of file.
+  head -n 5 -c 5 file => Display the first five characters of the first five lines of file.
+
+> sort => The sort command is used to sort the lines of a text file.
+  sort file => Sort the lines of file in alphabetical order.
+  sort -r file => Sort the lines of file in reverse order.
+  sort -n file => Sort the lines of file in numeric order.
+  sort -k 2 file => Sort the lines of file based on the second field (column).
+  sort -t ':' -k 3 file => Sort the lines of file based on the third field (column) using a colon (:) as the field separator.
+
+> du => The du command is used to estimate file space usage.
+  du file => Display the estimated space used by file.
+  du -h file => Display the estimated space used by file in a human readable format.
+  du -sh file => Display the estimated space used by file in a human readable format with a summary total.
+  du -sh * => Display the estimated space used by each file and directory in the current directory in a human readable format with a summary total.
+
+> find => used to search for files and directories within a specified directory hierarchy.
+  find . -type f -print => search the current directory and all of its subdirectories for regular files and print out the names of those files.
+    find: The command used to search for files/directories.
+    .: This dot (.) represents the current directory. It tells find to start searching from the current directory.
+    -type f: This option specifies that you want to find only regular files (not directories or other types of files like symbolic links).
+    -print: This option tells find to print the names of the files found.
+
+> wc => The wc command is used to count the number of lines, words, and bytes of a text file.
+  wc file => Display the number of lines, words, and bytes contained in file.
+  wc -l file => Display the number of lines contained in file.
+  wc -w file => Display the number of words contained in file.
+  wc -c file => Display the number of bytes contained in file.
+
+> Using Commands with Wildcards
+  cp *.txt text_files	            Copy all files in the current working directory with names ending with the characters ".txt" to an existing directory named text_files.
+  mv dir1 ../*.bak dir2	          Move the subdirectory dir1 and all the files ending in ".bak" in the current working directory's parent directory to an existing directory named dir2.
+  rm *~	                          Delete all files in the current working directory that end with the character "~". Some applications create backup files using this naming scheme. Using this command will clean them out of a directory.
+
+> clear => clear the terminal screen and move the cursor to the top of the screen.
+
+> Time commands
+
+  >> date: The date command is used to display the current date and time. It can also be used to display or set the system's date and time.
+    date => wed 11 mar 2020 10:00:00 AM CET
+
+  >> cal: The cal command is used to display a calendar of a specific month and year.
+    cal => print the current month's calendar
+    cal 2020 => print the whole calendar for the year 2020
+    cal 02 2020 => print the calendar for February 2020
+    cal julay 2020 => print the calendar for July 2020
+
+  >> ncal: The ncal command is used to display a calendar of a specific month and year. It is an alternative to the cal command.
+    ncal => print the current month's calendar
+    ncal 2020 => print the whole calendar for the year 2020
+    ncal 02 2020 => print the calendar for February 2020
+    ncal julay 2020 => print the calendar for July 2020
+
+> Commands can be one of 4 different kinds:
+
+  >> An executable program like all those files we saw in /usr/bin. Within this category, programs can be compiled binaries such as programs written in C and C++, or programs written in scripting languages such as the shell, Perl, Python, Ruby, etc.
+  >> A command built into the shell itself. bash provides a number of commands internally called shell builtins. The cd command, for example, is a shell builtin.
+  >> A shell function. These are miniature shell scripts incorporated into the environment.
+  >> An alias. Commands that we can define ourselves, built from other commands.
+
+  >> type: The type command is a shell builtin that displays the kind of command the shell will execute, given a particular command name. It works like this: where “command” is the name of the command we want to examine. Here are some examples:
+    [me@linuxbox me]$ type type
+    type is a shell builtin
+    [me@linuxbox me]$ type ls
+    ls is aliased to `ls --color=auto'
+    [me@linuxbox me]$ type cp
+    cp is /bin/cp
+  Here we see the results for three different commands. Notice that the one for ls and how the ls command is actually an alias for the ls command with the “-- color=auto” option added. Now we know why the output from ls is displayed in color!
+  
+  >> which: Sometimes there is more than one version of an executable program installed on a system. While this is not very common on desktop systems, it's not unusual on large servers. To determine the exact location of a given executable, the which command is used:
+    [me@linuxbox me]$ which ls
+    /bin/ls
+  which only works for executable programs, not builtins nor aliases that are substitutes for actual executable programs.
+  
+  >> help: bash has a built-in help facility available for each of the shell builtins. To use it, type “help” followed by the name of the shell builtin. Optionally, we can add the -m option to change the format of the output. For example:
+    - A note on notation: When square brackets appear in the description of a command's syntax, they indicate optional items. A vertical bar character indicates mutually exclusive items. In the case of the cd command: cd [-L|-P] [dir]
+    This notation says that the command cd may be followed optionally by either a “-L” or a “-P” and further, optionally followed by the argument “dir”.
+
+  >> --help: Many executable programs support a “--help” option that displays a description of the command's supported syntax and options. Some programs don't support the “--help” option, but try it anyway. Often it results in an error message that will reveal similar usage information.
+    cd --help
+
+  >> man: Most executable programs intended for command line use provide a formal piece of documentation called a manual or man page. A special paging program called man is used to view them. It is used like this:
+    man program
+  where “program” is the name of the command to view. Man pages vary somewhat in format but generally contain a title, a synopsis of the command's syntax, a description of the command's purpose, and a listing and description of each of the command's options. Man pages, however, do not usually include examples, and are intended as a reference, not a tutorial. On most Linux systems, man uses less to display the manual page, so all of the familiar less commands work while displaying the page.
+  
+  >> README and Other Documentation Files: Many software packages installed on your system have documentation files residing in the /usr/share/doc directory. Most of these are stored in plain text format and can be viewed with less. Some of the files are in HTML format and can be viewed with a web browser. We may encounter some files ending with a “.gz” extension. This indicates that they have been compressed with the gzip compression program. The gzip package includes a special version of less called zless that will display the contents of gzip-compressed text files.
+    zless /usr/share/doc/procps-ng/README.gz
+    zless /usr/share/doc/procps-ng/FAQ.gz
+
+> I/O Redirection
+  As we have seen, many commands such as ls print their output on the display. This does not have to be the case, however. By using some special notations we can redirect the output of many commands to files, devices, and even to the input of other commands.
+
+  >> Standard Output: Most command line programs that display their results do so by sending their results to a facility called standard output. By default, standard output directs its contents to the display. To redirect standard output to a file, the ">" character is used like this:
+    ls > file_list.txt
+  In this example, the ls command is executed and the results are written in a file named file_list.txt. Since the output of ls was redirected to the file, no results appear on the display.
+  Each time the command above is repeated, file_list.txt is overwritten from the beginning with the output of the command ls. To have the new results appended to the file instead, we use ">>" like this:
+    ls >> file_list.txt
+  When the results are appended, the new results are added to the end of the file, thus making the file longer each time the command is repeated. If the file does not exist when we attempt to append the redirected output, the file will be created.
+  
+  >> Standard Input: Many commands can accept input from a facility called standard input. By default, standard input gets its contents from the keyboard, but like standard output, it can be redirected. To redirect standard input from a file instead of the keyboard, the "<" character is used like this:
+    sort < file_list.txt
+  In the example above, we used the sort command to process the contents of file_list.txt. The results are output on the display since the standard output was not redirected. We could redirect standard output to another file like this:
+    sort < file_list.txt > sorted_file_list.txt
+  As we can see, a command can have both its input and output redirected. Be aware that the order of the redirection does not matter. The only requirement is that the redirection operators (the "<" and ">") must appear after the other options and arguments in the command.
+
+  >> Pipelines: The most useful and powerful thing we can do with I/O redirection is to connect multiple commands together to form what are called pipelines. With pipelines, the standard output of one command is fed into the standard input of another. Here is a very useful example:
+    ls -l | less
+  In this example, the output of the ls command is fed into less. By using this "| less" trick, we can make any command have scrolling output.
+  By connecting commands together, we can accomplish amazing feats. Here are some examples to try:
+    ls -lt | head	                  Displays the 10 newest files in the current directory.
+    du | sort -nr	                  Displays a list of directories and how much space they consume, sorted from the largest to the smallest.
+    find . -type f -print | wc -l	  Displays the total number of files in the current working directory and all of its subdirectories.
+
+  >> Filters: One kind of program frequently used in pipelines is called a filter. Filters take standard input and perform an operation upon it and send the results to standard output. In this way, they can be combined to process information in powerful ways. Here are some of the common programs that can act as filters:
+    sort	  Sorts standard input then outputs the sorted result on standard output.
+    uniq	  Given a sorted stream of data from standard input, it removes duplicate lines of data (i.e., it makes sure that every line is unique).
+    grep	  Examines each line of data it receives from standard input and outputs every line that contains a specified pattern of characters.
+    fmt	    Reads text from standard input, then outputs formatted text on standard output.
+    pr	    Takes text input from standard input and splits the data into pages with page breaks, headers and footers in preparation for printing.
+    head	  Outputs the first few lines of its input. Useful for getting the header of a file.
+    tail	  Outputs the last few lines of its input. Useful for things like getting the most recent entries from a log file.
+    tr	    Translates characters. Can be used to perform tasks such as upper/lowercase conversions or changing line termination characters from one type to another (for example, converting DOS text files into Unix style text files).
+    sed	    Stream editor. Can perform more sophisticated text translations than tr.
+    gawk	  An entire programming language designed for constructing filters. Extremely powerful.
+  
+  >> Performing tasks with pipelines
+
+    1. Printing from the command line. Linux provides a program called lpr that accepts standard input and sends it to the printer. It is often used with pipes and filters. Here are a couple of examples:
+      cat poorly_formatted_report.txt | fmt | pr | lpr
+      cat unsorted_list_with_dupes.txt | sort | uniq | pr | lpr
+    In the first example, we use cat to read the file and output it to standard output, which is piped into the standard input of fmt. fmt formats the text into neat paragraphs and outputs it to standard output, which is piped into the standard input of pr. pr splits the text neatly into pages and outputs it to standard output, which is piped into the standard input of lpr. lpr takes its standard input and sends it to the printer.
+    The second example starts with an unsorted list of data with duplicate entries. First, cat sends the list into sort which sorts it and feeds it into uniq which removes any duplicates. Next pr and lpr are used to paginate and print the list.
+
+    2. Viewing the contents of tar files. Often you will see software distributed as a gzipped tar file. This is a traditional Unix style tape archive file (created with tar) that has been compressed with gzip. You can recognize these files by their traditional file extensions, ".tar.gz" or ".tgz". You can use the following command to view the directory of such a file on a Linux system:
+      tar tzvf name_of_file.tar.gz | less
+
+> Expansion
+  Each time we type a command line and press the enter key, bash performs several processes upon the text before it carries out our command. We have seen a couple of cases of how a simple character sequence, for example “*”, can have a lot of meaning to the shell. The process that makes this happen is called expansion. With expansion, we type something and it is expanded into something else before the shell acts upon it. To demonstrate what we mean by this, let's take a look at the echo command. echo is a shell builtin that performs a very simple task. It prints out its text arguments on standard output:
+    [me@linuxbox me]$ echo this is a test
+    this is a test
+  That's pretty straightforward. Any argument passed to echo gets displayed. Let's try another example:
+    [me@linuxbox me]$ echo *
+    Desktop Documents ls-output.txt Music Pictures Public Templates Videos
+  So what just happened? Why didn't echo print “*”? As we recall from our work with wildcards, the “*” character means match any characters in a filename, but what we didn't see in our original discussion was how the shell does that. The simple answer is that the shell expands the “*” into something else (in this instance, the names of the files in the current working directory) before the echo command is executed. When the enter key is pressed, the shell automatically expands any qualifying characters on the command line before the command is carried out, so the echo command never saw the “*”, only its expanded result. Knowing this, we can see that echo behaved as expected.
+
+  >> Pathname Expansion: The mechanism by which wildcards work is called pathname expansion. If we try some of the techniques that we employed in our earlier lessons, we will see that they are really expansions. Given a home directory that looks like this:
+    [me@linuxbox me]$ ls
+    Desktop
+    ls-output.txt
+    Documents Music
+    Pictures
+    Public
+    Templates
+    Videos
+  we could carry out the following expansions:
+    [me@linuxbox me]$ echo D*
+    Desktop Documents
+  and:
+    [me@linuxbox me]$ echo *s
+    Documents Pictures Templates Videos
+  or even:
+    [me@linuxbox me]$ echo [[:upper:]]*
+    Desktop Documents Music Pictures Public Templates Videos
+  and looking beyond our home directory:
+    [me@linuxbox me]$ echo /usr/*/share
+    /usr/kerberos/share   /usr/local/share
+
+  >> Tilde Expansion: As we recall from our introduction to the cd command, the tilde character (“~”) has a special meaning. When used at the beginning of a word, it expands into the name of the home directory of the named user, or if no user is named, the home directory of the current user:
+    [me@linuxbox me]$ echo ~
+    /home/me
+  If user “foo” has an account, then:
+    [me@linuxbox me]$ echo ~foo
+    /home/foo
+  
+  >> Arithmetic Expansion $((expression)): The shell allows arithmetic to be performed by expansion. This allow us to use the shell prompt as a calculator:
+    [me@linuxbox me]$ echo $((2 + 2))
+    4
+  Arithmetic expansion uses the form: $((expression)). where expression is an arithmetic expression consisting of values and arithmetic operators. Arithmetic expansion only supports integers (whole numbers, no decimals), but can perform quite a number of different operations. Spaces are not significant in arithmetic expressions and expressions may be nested. For example, to multiply five squared by three:
+    [me@linuxbox me]$ echo $(($((5**2)) * 3))
+    75
+  Single parentheses may be used to group multiple subexpressions. With this technique, we can rewrite the example above and get the same result using a single expansion instead of two:
+    [me@linuxbox me]$ echo $(((5**2) * 3))
+    75
+  Here is an example using the division and remainder operators. Notice the effect of integer division:
+    [me@linuxbox me]$ echo Five divided by two equals $((5/2))
+    Five divided by two equals 2
+    [me@linuxbox me]$ echo with $((5%2)) left over.
+    with 1 left over.
+
+  >> Brace Expansion {,,,} {...}: Perhaps the strangest expansion is called brace expansion. With it, we can create multiple text strings from a pattern containing braces. Here's an example:
+    [me@linuxbox me]$ echo Front-{A,B,C}-Back
+    Front-A-Back Front-B-Back Front-C-Back
+  Patterns to be brace expanded may contain a leading portion called a preamble and a trailing portion called a postscript. The brace expression itself may contain either a comma-separated list of strings, or a range of integers or single characters. The pattern may not contain embedded whitespace. Here is an example using a range of integers:
+    [me@linuxbox me]$ echo Number_{1..5}
+    Number_1 Number_2 Number_3 Number_4 Number_5
+  A range of letters in reverse order:
+    [me@linuxbox me]$ echo {Z..A}
+    Z Y X W V U T S R Q P O N M L K J I H G F E D C B A
+  Brace expansions may be nested:
+    [me@linuxbox me]$ echo a{A{1,2},B{3,4}}b
+    aA1b aA2b aB3b aB4b
+  So what is this good for? The most common application is to make lists of files or directories to be created. For example, if we were a photographer and had a large collection of images we wanted to organize into years and months, the first thing we might do is create a series of directories named in numeric “Year-Month” format. This way, the directory names will sort in chronological order. we could type out a complete list of directories, but that's a lot of work and it's error-prone too. Instead, we could do this:
+    [me@linuxbox me]$ mkdir Photos
+    [me@linuxbox me]$ cd Photos
+    [me@linuxbox Photos]$ mkdir {2017..2019}-{01..12}
+    [me@linuxbox Photos]$ ls
+    2017-01 2017-07 2018-01 2018-07 2019-01 2019-07
+    2017-02 2017-08 2018-02 2018-08 2019-02 2019-08
+    2017-03 2017-09 2018-03 2018-09 2019-03 2019-09
+    2017-04 2017-10 2018-04 2018-10 2019-04 2019-10
+    2017-05 2017-11 2018-05 2018-11 2019-05 2019-11
+    2017-06 2017-12 2018-06 2018-12 2019-06 2019-12
+    [me@linuxbox Photos]$ mkdir -p {2001..2023}/{01..12} => This command will create directories from 2001 to 2023, and within each year directory, it will create subdirectories for each month (01 to 12).
+
+  >> Parameter Expansion $var: We're only going to touch briefly on parameter expansion in this lesson, but we'll be covering it more later. It's a feature that is more useful in shell scripts than directly on the command line. Many of its capabilities have to do with the system's ability to store small chunks of data and to give each chunk a name. Many such chunks, more properly called variables, are available for our examination. For example, the variable named “USER” contains our user name. To invoke parameter expansion and reveal the contents of USER we would do this:
+    [me@linuxbox me]$ echo $USER
+    me
+  To see a list of available variables, try this:
+    [me@linuxbox me]$ printenv | less
+  With other types of expansion, if we mistype a pattern, the expansion will not take place and the echo command will simply display the mistyped pattern. With parameter expansion, if we misspell the name of a variable, the expansion will still take place, but will result in an empty string:
+    [me@linuxbox me]$ echo $SUER
+    The variable SUER does not exist, so the expansion results in an empty string. This is a common source of errors in shell scripts.
+    [me@linuxbox ~]$
+
+  >> Command Substitution $(command) - `command`: Command substitution allows us to use the output of a command as an expansion:
+    [me@linuxbox me]$ echo $(ls)
+    Desktop Documents ls-output.txt Music Pictures Public Templates Videos
+  A clever one goes something like this:
+    [me@linuxbox me]$ ls -l $(which cp)
+    -rwxr-xr-x 1 root root 71516 2007-12-05 08:58 /bin/cp
+  Here we passed the results of which cp as an argument to the ls command, thereby getting the listing of of the cp program without having to know its full pathname. We are not limited to just simple commands. Entire pipelines can be used (only partial output shown):
+    [me@linuxbox me]$ file $(ls /usr/bin/* | grep bin/zip)
+    /usr/bin/bunzip2:
+    /usr/bin/zip:      ELF 32-bit LSB executable, Intel 80386, version 1 
+    (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.15, stripped
+    /usr/bin/zipcloak: ELF 32-bit LSB executable, Intel 80386, version 1
+    (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.15, stripped
+    /usr/bin/zipgrep:  POSIX shell script text executable
+    /usr/bin/zipinfo:  ELF 32-bit LSB executable, Intel 80386, version 1
+    (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.15, stripped
+    /usr/bin/zipnote:  ELF 32-bit LSB executable, Intel 80386, version 1
+    (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.15, stripped
+    /usr/bin/zipsplit: ELF 32-bit LSB executable, Intel 80386, version 1
+    (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.15, stripped
+  In this example, the results of the pipeline became the argument list of the file command. There is an alternate syntax for command substitution in older shell programs which is also supported in bash. It uses back-quotes instead of the dollar sign and parentheses:
+    [me@linuxbox me]$ ls -l `which cp`
+    -rwxr-xr-x 1 root root 71516 2007-12-05 08:58 /bin/cp
+
+> Quoting
+  Now that we've seen how many ways the shell can perform expansions, it's time to learn how we can control it. Take for example:
+    [me@linuxbox me]$ echo this is a     test
+    this is a test
+  or:
+    [me@linuxbox me]$ [me@linuxbox ~]$ echo The total is $100.00
+    The total is 00.00
+  In the first example, word-splitting by the shell removed extra whitespace from the echo command's list of arguments. In the second example, parameter expansion substituted an empty string for the value of “$1” because it was an undefined variable. The shell provides a mechanism called quoting to selectively suppress unwanted expansions.
+
+  >> Double Quotes: The first type of quoting we will look at is double quotes. If we place text inside double quotes, all the special characters used by the shell lose their special meaning and are treated as ordinary characters. The exceptions are “$”, “\” (backslash), and “`” (back- quote). This means that word-splitting, pathname expansion, tilde expansion, and brace expansion are suppressed, but parameter expansion, arithmetic expansion, and command substitution are still carried out. Using double quotes, we can cope with filenames containing embedded spaces. Imagine we were the unfortunate victim of a file called two words.txt. If we tried to use this on the command line, word-splitting would cause this to be treated as two separate arguments rather than the desired single argument:
+    [me@linuxbox me]$ ls -l two words.txt
+    ls: cannot access two: No such file or directory
+    ls: cannot access words.txt: No such file or directory
+  By using double quotes, we can stop the word-splitting and get the desired result; further, we can even repair the damage:
+    [me@linuxbox me]$ ls -l "two words.txt"
+    -rw-rw-r-- 1 me me 18 2020-02-20 13:03 two words.txt
+    [me@linuxbox me]$ mv "two words.txt" two_words.txt
+  There! Now we don't have to keep typing those pesky double quotes. Remember, parameter expansion, arithmetic expansion, and command substitution still take place within double quotes:
+    [me@linuxbox me]$ echo "$USER $((2+2)) $(cal)"
+    me 4
+    February 2020
+    Su Mo Tu We Th Fr Sa
+                    1  2
+    3  4  5  6  7  8  9
+    10 11 12 13 14 15 16
+    17 18 19 20 21 22 23
+    24 25 26 27 28 29
+  We should take a moment to look at the effect of double quotes on command substitution. First let's look a little deeper at how word splitting works. In our earlier example, we saw how word-splitting appears to remove extra spaces in our text:
+    [me@linuxbox me]$ echo this is a     test
+    this is a test
+  By default, word-splitting looks for the presence of spaces, tabs, and newlines (linefeed characters) and treats them as delimiters between words. This means that unquoted spaces, tabs, and newlines are not considered to be part of the text. They only serve as separators. Since they separate the words into different arguments, our example command line contains a command followed by four distinct arguments. If we add double quotes:
+    [me@linuxbox me]$ echo "this is a     test"
+    this is a     test
+  word-splitting is suppressed and the embedded spaces are not treated as delimiters, rather they become part of the argument. Once the double quotes are added, our command line contains a command followed by a single argument. The fact that newlines are considered delimiters by the word-splitting mechanism causes an interesting, albeit subtle, effect on command substitution. Consider the following:
+    [me@linuxbox me]$ echo $(cal)
+    February 2020 Su Mo Tu We Th Fr Sa 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+    15 16 17 18 19 20 21 22 23 24 25 26 27 28 29
+    [me@linuxbox me]$  echo "$(cal)"
+    February 2020
+    Su Mo Tu We Th Fr Sa
+                    1  2
+    3  4  5  6  7  8  9
+    10 11 12 13 14 15 16
+    17 18 19 20 21 22 23
+    24 25 26 27 28 29
+  In the first instance, the unquoted command substitution resulted in a command line containing thirty-eight arguments. In the second, a command line with one argument that includes the embedded spaces and newlines.
+
+  >> Single Quotes: When we need to suppress all expansions, we use single quotes. Here is a comparison of unquoted, double quotes, and single quotes:
+    [me@linuxbox me]$ echo text ~/*.txt {a,b} $(echo foo) $((2+2)) $USER
+    text /home/me/ls-output.txt a b foo 4 me
+    [me@linuxbox me]$ echo "text ~/*.txt {a,b} $(echo foo) $((2+2)) $USER"
+    text ~/*.txt {a,b} foo 4 me
+    [me@linuxbox me]$ echo 'text ~/*.txt {a,b} $(echo foo) $((2+2)) $USER'
+    text ~/*.txt {a,b} $(echo foo) $((2+2)) $USER
+    [me@linuxbox me]$ echo 'text ~/*.txt     {a,b}      $(echo foo) $((2+2)) $USER'
+    text ~/*.txt     {a,b}      $(echo foo) $((2+2)) $USER
+  As we can see, with each succeeding level of quoting, more and more of the expansions are suppressed.
+  
+  >> Escaping Characters: Sometimes we only want to quote a single character. To do this, we can precede a character with a backslash, which in this context is called the escape character. Often this is done inside double quotes to selectively prevent an expansion:
+    [me@linuxbox me]$ echo "The balance for user $USER is: \$5.00"
+    The balance for user me is: $5.00
+    [me@linuxbox me]$ echo "The balance for user $USER is: \$5.00 $USER"
+    The balance for user me is: $5.00 me
+  The second $USER is not escaped, so it will be expanded.
+  It is also common to use escaping to eliminate the special meaning of a character in a filename. For example, it is possible to use characters in filenames that normally have special meaning to the shell. These would include “$”, “!”, “&”, “ “, and others. To include a special character in a filename we can to this:
+    [me@linuxbox me]$ mv bad\&filename good_filename
+  To allow a backslash character to appear, escape it by typing “\\”. Note that within single quotes, the backslash loses its special meaning and is treated as an ordinary character.
+
+  >> More Backslash Tricks: If we look at the man pages for any program written by the GNU project, we will see that in addition to command line options consisting of a dash and a single letter, there are also long option names that begin with two dashes. For example, the following are equivalent:
+    ls -r
+    ls --reverse
+  Why do they support both? The short form is for lazy typists on the command line and the long form is mostly for scripts though some options may only be available in long form. Sometimes it is better to use a long option when the option is obscure or we want to document more clearly what an option is. This is especially useful when writing scripts where maximum readability is desired, and besides, anytime we can save ourselves a trip to the man page is a good thing.
+  As we might suspect, using the long form options can make a single command line very long. To combat this problem, we can use a backslash to get the shell to ignore a newline character like this:
+    ls -l \
+      --reverse \
+      --human-readable \
+      --full-time
+  Using the backslash in this way allows us to embed newlines in our command. Note that for this trick to work, the newline must be typed immediately after the backslash. If we put a space after the backslash, the space will be ignored, not the newline. Backslashes are also used to insert special characters into our text. These are called backslash escape characters. Here are the common ones:
+    Escape Character	        Name	                Possible Uses
+    \n	                      newline	              Adding blank lines to text
+    \t	                      tab	Inserting         horizontal tabs to text
+    \a	                      alert	                Makes our terminal beep
+    \\	                      backslash	            Inserts a backslash
+    \f	                      formfeed	            Sending this to our printer ejects the page
+  The use of the backslash escape characters is very common. This idea first appeared in the C programming language. Today, the shell, C++, Perl, python, awk, tcl, and many other programming languages use this concept. Using the echo command with the -e option will allow us to demonstrate:
+    [me@linuxbox me]$ echo -e "Inserting several blank lines\n\n\n"
+    Inserting several blank lines
+
+    [me@linuxbox me]$ echo -e "Words\tseparated\tby\thorizontal\ttabs."
+    Words separated   by  horizontal  tabs
+    [me@linuxbox me]$ echo -e "\aMy computer went \"beep\"."
+    My computer went "beep".
+    [me@linuxbox me]$ echo -e "DEL C:\\WIN2K\\LEGACY_OS.EXE"
+    DEL C:\WIN2K\LEGACY_OS.EXE
+
+> Permissions
+
+  >> File Permissions: On a Linux system, each file and directory is assigned access rights for the owner of the file, the members of a group of related users, and everybody else. Rights can be assigned to read a file, to write a file, and to execute a file (i.e., run the file as a program). To see the permission settings for a file, we can use the ls command. As an example, we will look at the bash program which is located in the /bin directory:
+    [me@linuxbox me]$ ls -l /bin/bash
+    -rwxr-xr-x 1 root root 1113504 Jun  6  2019 /bin/bash
+  Here we can see:
+    The file "/bin/bash" is owned by user "root"
+    The superuser has the right to read, write, and execute this file
+    The file is owned by the group "root"
+    Members of the group "root" can also read and execute this file
+    Everybody else can read and execute this file
+    1 refers to the number of hard links to this file
+  we see how the first portion of the listing is interpreted. It consists of a character indicating the file type, followed by three sets of three characters that convey the reading, writing and execution permission for the owner, group, and everybody else. rwx rwx rwx
+
+  >> chmod files
+    The chmod command is used to change the permissions of a file or directory. To use it, we specify the desired permission settings and the file or files that we wish to modify. There are two ways to specify the permissions. In this lesson we will focus on one of these, called the octal notation method. It is easy to think of the permission settings as a series of bits (which is how the computer thinks about them). Here's how it works:
+      rwx rwx rwx = 111 111 111
+      rw- rw- rw- = 110 110 110
+      rwx --- --- = 111 000 000
+    and so on...
+      rwx = 111 in binary = 7
+      rw- = 110 in binary = 6
+      r-x = 101 in binary = 5
+      r-- = 100 in binary = 4
+    Now, if we represent each of the three sets of permissions (owner, group, and other) as a single digit, we have a pretty convenient way of expressing the possible permissions settings. For example, if we wanted to set some_file to have read and write permission for the owner, but wanted to keep the file private from others, we would:
+      [me@linuxbox me]$ chmod 600 some_file
+    Here is a table of numbers that covers all the common settings. The ones beginning with "7" are used with programs (since they enable execution) and the rest are for other kinds of files.
+      Value	      Meaning
+      777	        (rwxrwxrwx) No restrictions on permissions. Anybody may do anything. Generally not a desirable setting.
+      755	        (rwxr-xr-x) The file's owner may read, write, and execute the file. All others may read and execute the file. This setting is common for programs that are used by all users.
+      700	        (rwx------) The file's owner may read, write, and execute the file. Nobody else has any rights. This setting is useful for programs that only the owner may use and must be kept private from others.
+      666	        (rw-rw-rw-) All users may read and write the file.
+      644	        (rw-r--r--) The owner may read and write a file, while all others may only read the file. A common setting for data files that everybody may read, but only the owner may change.
+      600	        (rw-------) The owner may read and write a file. All others have no rights. A common setting for data files that the owner wants to keep private.
+    another ways
+      chmod u=rwx,g=rx,o=rx some_file
+      chmod u+x some_file => Add execute permission for the owner.
+      chmod g-x some_file => Remove execute permission for the group.
+      chmod o=r some_file => Set read-only permission for others.
+      chmod +rw some_file => Add read and write permission for everybody.
+      chmod a+x some_file => Add execute permission for everybody.
+      chmod --reference=file1 file2 => Set the permissions of file2 to be the same as file1.
+
+  >> Directory Permissions
+    The chmod command can also be used to control the access permissions for directories. Again, we can use the octal notation to set permissions, but the meaning of the r, w, and x attributes is different:
+      r - Allows the contents of the directory to be listed if the x attribute is also set.
+      w - Allows files within the directory to be created, deleted, or renamed if the x attribute is also set.
+      x - Allows a directory to be entered (i.e. cd dir).
+    Here are some useful settings for directories:
+      Value	      Meaning
+      777	        (rwxrwxrwx) No restrictions on permissions. Anybody may list files, create new files in the directory and delete files in the directory. Generally not a good setting.
+      755	        (rwxr-xr-x) The directory owner has full access. All others may list the directory, but cannot create files nor delete them. This setting is common for directories that you wish to share with other users.
+      700	        (rwx------) The directory owner has full access. Nobody else has any rights. This setting is useful for directories that only the owner may use and must be kept private from others.
+    adds execute permission to all subdirectories of the current directory for the owner, the group owner and all other users.
+      chmod -R +x
+    adds execute permission to all subdirectories of the current directory for the owner, the group owner and all other users. Regular files should not be changed.
+      chmod a+x */
+
+  >> Becoming the Superuser for a Short While
+    It is often necessary to become the superuser to perform important system administration tasks, but as we know, we should not stay logged in as the superuser. In most distributions, there is a program that can give you temporary access to the superuser's privileges. This program is called su (short for substitute user) and can be used in those cases when you need to be the superuser for a small number of tasks. To become the superuser, simply type the su command. You will be prompted for the superuser's password:
+      [me@linuxbox me]$ su
+      Password:
+      [root@linuxbox me]#
+    After executing the su command, we have a new shell session as the superuser. To exit the superuser session, type exit and we will return to your previous session.
+    In most modern distributions, an alternate method is used. Rather than using su, these systems employ the sudo command instead. With sudo, one or more users are granted superuser privileges on an as needed basis. To execute a command as the superuser, the desired command is simply preceded with the sudo command. After the command is entered, the user is prompted for the their own password rather than the superuser's:
+      [me@linuxbox me]$ sudo some_command
+      Password for me:
+      [me@linuxbox me]$
+    In fact, modern distributions don't even set the root account password thus making it impossible to log in as the root user. A root shell is still possible with sudo by using the "-i" option:
+      [me@linuxbox me]$ sudo -i
+      Password for me:
+      root@linuxbox:~#
+    
+  >> Changing File Ownership
+    We can change the owner of a file by using the chown command. Here's an example: Suppose we wanted to change the owner of some_file from "me" to "you". We could:
+      [me@linuxbox me]$ sudo chown you some_file
+    Notice that in order to change the owner of a file, we must have superuser privileges. To do this, our example employed the sudo command to execute chown. chown works the same way on directories as it does on files.
+      chown newuser:newgroup some_file => Change both the user and group ownership of some_file to newuser and newgroup.
+  
+  >> Changing Group Ownership
+    The group ownership of a file or directory may be changed with chgrp. This command is used like this:
+    [me@linuxbox me]$ chgrp new_group some_file
+    In the example above, we changed the group ownership of some_file from its previous group to "new_group". We must be the owner of the file or directory to perform a chgrp.
+
+  >> chang the current user to another user
+    su - username
+    su username
+    sudo su - username
+    sudo su username
+    sudo -u username
+    sudo -i -u username
+
+> SHELL scripting
+
+  >> 

@@ -1,0 +1,186 @@
+> Git is what's known as a version control system, sometimes abbreviated as VCS. Not only is it a VCS, it's actually the world's most popular version control system. And that's because it's open source, it's free, and it's really powerful. It's used by millions of developers around the world. And it's used by some of the world's largest companies, including Google, Facebook, Microsoft, Netflix, Twitter, and many, many more. Git is used by more than just developers. It's used by designers, writers, and even non-technical people.
+
+> version control is software that helps track and manage changes to a set of files over time.
+
+  >> In general, most version control systems allow things like revisiting earlier versions of files, comparing changes made between different versions and different files, undoing changes, sharing changes with other people. Git does this and more. And to be clear, GIT is just one of many version control options out there. Over the years, they've kind of come and gone, but some of the more well-known ones include Subversion, CVS, and Mercurial. And they all have similar goals of helping developers or helping users track changes to projects over time. But they do have significant differences in how they operate the syntax and how they achieve those goals.
+
+  >> Git is different from all of these other version control systems. And it's different in a few ways. it's distributed. and also fast. It's really fast. It's designed to be fast, efficient And handle large projects with speed and efficiency. And it does this by using something called a snapshot. And a snapshot is just a picture of what all of your files look like at a given point in time. uses these snapshots to track changes to your files over time. And it does this by comparing snapshots.
+
+> Git is both a Version Control System (VCS) and a Source Code Management (SCM) system. It was created by Linus Torvalds in 2005 and is widely used for tracking changes in source code during software development. As a VCS, Git helps developers manage different versions of their codebase, allowing them to track changes, collaborate with others, and revert to previous versions if needed. Additionally, it serves as an SCM by managing and organizing source code files and their history efficiently.
+
+> Version Control System (VCS) and Source Code Management (SCM) are often used interchangeably, and there's a close relationship between the two, but they can be seen as slightly different aspects of the same concept:
+  1. Version Control System (VCS): This term generally refers to the software or tool that helps in tracking and managing changes made to files over time. It is a broader concept that encompasses not only source code but also other files in a project. VCS allows users to keep track of different versions of files, revert to previous versions, merge changes made by multiple people, and collaborate effectively.
+  2. Source Code Management (SCM): SCM is a specific application of version control, mainly focusing on managing and controlling changes to the source code files during software development. It's a subset of VCS, concentrating specifically on the control and management of source code.
+In essence, while VCS is a more general term that includes any system capable of managing versions of files, SCM specifically emphasizes the control and management of source code files within that broader VCS framework. Git, for instance, is both a VCS and an SCM. It can manage versions of any file, but it's particularly well-known and widely used for managing source code files within software development projects.
+
+> SCM can stand for both Source Code Management and Software Configuration Management, and the interpretation of the abbreviation can vary based on context and usage within the software development domain.
+  1. Source Code Management (SCM): This term specifically focuses on the control, tracking, and management of changes made to the source code of a software project. SCM tools like Git, Subversion (SVN), Mercurial, etc., primarily deal with versioning and tracking changes in source code files.
+  2. Software Configuration Management (SCM): This term has a broader scope. While it includes Source Code Management, it also encompasses the management of various components and configurations involved in software development. It involves tracking changes in not just source code but also other software artifacts such as requirements, design documents, test plans, libraries, documentation, and more. SCM in this sense refers to a comprehensive management process for the entire software development lifecycle.
+The usage and interpretation of "SCM" often depend on the specific context in which it's being used. In some cases, people might refer to it explicitly as Source Code Management to emphasize the handling of code changes, while in other cases, they might use it in the broader context of Software Configuration Management to denote a more comprehensive approach to managing all aspects of software development.
+
+> Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. Git is easy to learn and has a tiny footprint with lightning fast performance. It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with features like cheap local branching, convenient staging areas, and multiple workflows.
+
+> GIT help us in many ways:
+  >> Tracking changes accross multiple files
+  >> compare versions of a project
+  >> back to old versions
+  >> revert to previous versions
+  >> collaborate and share changes with others
+  >> combine changes from multiple people
+
+> Linus Torvalds is the creator of Linux and Git. He created Git in 2005 to manage the Linux kernel development. he referred to Git as the stupid content tracker. He said that he named it Git as he is an egotistical bastard and the name Git was already taken by the British slang word for a stupid or unpleasant person. a couple of different meanings of the name depending on you mood, but the most common one is global information tracker if you are in a good mood and it is global idiotic tracker when you are in a bad mood. or just random three-letters compination that is pronounceable, and not actually used by any common UNIX command.
+
+> GIT vs. GitHub
+
+>> Git is a version control system that runs locally on your machine and can be used from the command line. you do not have to register for an account to use Git. you do not need internet to use it. you can use it without ever interacting with GitHub.
+
+>> GitHub is a web-based hosting service for Git repositories. it is a place to store your code and interact with other developers in cloud. you have to register for an account to use GitHub. you need internet to use it. you can use GitHub without ever interacting with Git.
+
+> Git is a distributed version control system. this means that every developer has a full copy of the repository on their machine. this allows you to work offline and not have to be on the internet or a VPN to access the full repository history. it also means that if the central server goes down, you still have a full copy of the repository on your machine. you can then use your local copy of the repository to restore the central server. this is a big advantage over centralized version control systems like SVN and CVS.
+
+> GIT primarily is a command line tool. Git was created as command-line tool. To use it, we run various git commands in a Unix shell. This is how most developers use Git. There are also GUI tools that can be used with Git. These tools provide a graphical interface to Git commands. Some of the more popular ones are GitHub Desktop, GitKraken, SourceTree, Tower and Ungit . However, it is important to note that these tools are not Git. They are just a different way to interact with Git.
+
+> Windows Installation
+
+  >> Installing Git on a Windows machine is, it's not complicated but it's a little bit trickier than to do it on a Mac. And the reason for this is that Git was designed, it was created to run on a Unix-based interface. It was designed for Linux because the guy who created it Linus Torvalds, also created Linux. Okay, the problem that we run into on a Windows machine is that Windows machines don't come with a Unix-based prompt by default. Windows comes with a different command line interface called Command Prompt. It's not Unix-based. It just causes an issue here. Git wants to run with a Unix-based interface and there's this shell, this thing called Bash that is a default shell for Linux machines and for Macs. So it's a lot easier on those machines. We don't have to go jump through any hoops. On a Windows machine, we have to download something called Git Bash which we're about to do and Git Bash is going to emulate a Bash, a Unix experience on our Windows machine. And it comes with Git also. So some people actually use Git Bash without even touching the Git portion. They just want the Bash portion.
+
+  >> mintty is a free and open source terminal emulator for Cygwin, the Unix-like environment for Windows. It features a native Windows user interface and does not require a display server; its terminal emulation is aimed to be compatible with xterm. mintty supports character cell and graphical interfaces and allows copy/paste using the Windows clipboard and drag and drop using the mouse. mintty is based on code from PuTTY 0.60 by Simon Tatham and team. It can be downloaded from the project homepage. mintty is installed by default with Cygwin, a Unix-like environment for Windows. It can be installed as a standalone package on other systems.
+
+  >> Cygwin is a Unix-like environment and command-line interface for Microsoft Windows. Cygwin's purpose is expressed in its motto: "Get that Linux feeling - on Windows". The terminal emulator Mintty is the default command-line interface provided to interact with the environment. Cygwin was originally developed by Cygnus Solutions, which was later acquired by Red Hat. It is free and open-source software, released under the GNU General Public License version 3. Today it is maintained by employees of Red Hat, NetApp and many other volunteers.
+
+> Git Configuration
+  >> git config --global user.name "Your Name" => to set your name
+  >> git config --global user.email => to set your email
+  >> git config user.name => to retrieve your name
+  >> git config user.email => to retrieve your email
+
+> GIT Repository: A Git "Repo" is a workspace which tracks and manages files within a folder. We can have as many repos on our machine as needed, all with separate histories and contents.
+
+  >> A repo is a folder that is being tracked by Git. This means that Git is watching the folder for changes. Any changes made to the files in the folder will be tracked by Git. This allows Git to keep track of the history of the folder. Git will remember every change that has been made to the folder, and it will allow us to view or revert to any previous version of the folder.
+
+  >> A repo can be thought of as a project. It is a folder that contains all of the files and folders that make up a project. A repo can contain any type of file, including text files, images, videos, etc. It can also contain other folders, which can contain their own files and folders. A repo can be as simple as a single text file, or it can be as complex as a large application with thousands of files and folders.
+
+  >> A repo is created by running [git init] inside a folder. This creates a hidden .git folder inside the directory, which is where Git stores all of the repo's history and data. This folder should not be modified manually. A repo can be deleted by deleting the .git folder.
+
+  >> A repo can be created from scratch, or it can be cloned from an existing repo. Cloning is the process of copying an existing repo from a remote server (like GitHub) to your local machine. This is done with the git clone command. 
+
+> GIT commands
+
+  >> git init : Create an empty Git repository or reinitialize an existing one
+
+    [machine_name] /H/MY Drive/So.......mp-Project
+    git init
+    Initialized empty Git repository in H:/MY Drive/Software Deve......mp-Project/.git/
+    git Init
+    Reinitialized existing Git repository in H:/MY Drive/Software Deve......mp-Project/.git/
+
+    - the working directory now is a repo
+      [machine_name] /H/MY Drive/So.......mp-Project (master)
+
+    - the .git folder is hidden by default in windows
+      [machine_name] /H/MY Drive/So.......mp-Project (master)
+      ls -a
+      ./  ../  .git/
+
+  >> git status : Show the working tree status
+
+    [machine_name] /H/MY Drive/So.......mp-Project
+    fatal: not a git repository (or any of the parent directories): .git
+
+    [machine_name] /H/MY Drive/So.......mp-Project (master)
+    On branch master
+    No commits yet
+    nothing to commit (create/copy files and use "git add" to track)
+
+    - Git Tracks A Directory and All Nested Subdirectories and Files. This means that if we create a new file or subdirectory inside of a tracked directory, Git will automatically track it. We do not need to run git add again to track the new file or subdirectory. We only need to run git add once, and Git will track all files and subdirectories inside of the directory.
+
+    - DO NOT INIT A REPO INSIDE OF A REPO! Before running git init, use git status to verify that you are not currently inside of a repo.
+
+    - get status inside any subdirectory of the repo will give the same previous result. Git tracks the whole repo not just the current directory.
+
+    - git status is the most important command in Git. It is used to check the status of the repo. It shows which files have been modified, which files are staged, and which files are untracked. It also shows which branch we are currently on.
+
+  >> git add : Add file contents to the index
+    
+    git add file_names... => to add specific files
+    
+    git add . => to stage all changes at once
+
+  >> git commit : Record changes to the repository
+
+    git commit -m "message" => to commit with a message
+
+    git commit => to commit and then write the message in the default editor
+
+  >> git log : Show commit logs
+
+    git log => show all commits in the repo with their messages and other info like date, author, etc.
+
+    git log --oneline => show all commits in the repo with their messages only.
+
+> GIT workflow
+
+  >> a git-commit is one of these checkpoints in a Git repository. a commit is not the same as just saving a file. It's actually, think of it as something that's built on top of saving files. We have to make changes first, and save them to our files before we can even commit. So, we might use the term checkpoint, or save point. But we're not talking about just saving a file. That has nothing to do with Git. We save files all the time. But once we have made changes, we can then group them together into a commit.
+
+  >> a commit is actually a multi-step process. It's not as simple as just hitting a button that says, "Commit, commit, commit." Instead, there's an intermediate step where we actually call out the particular changes that we've made that we want to include in a commit. And this allows us to selectively make commits. We don't have to commit everything that we've changed. We can actually pick and choose which changes we want to include in a commit. And this is a really powerful feature of Git.
+
+  >> The Basic Git Workflow: Working Directory -> git add -> Staging Area -> git commit -> Repository
+    - Work On Stuff => Make new files, edit files, delete files, etc
+    - Add Changes => Group specific changes together, in preparation of committing them
+    - Commit => Commit everything that was previously added
+
+  >> working tree is the directory that contains the .git folder. It is the directory that is being tracked by Git. It is also sometimes referred to as the working directory, or just the repo.
+
+  >> staging area is a file that contains a list of all of the changes that will be included in the next commit. It is also sometimes referred to as the index.
+
+> GIT Commet
+
+  >> Atomic Commits When possible, a commit should encompass a single feature, change, or fix. In other words, try to keep each commit focused on a single thing. This makes it much easier to undo or rollback changes later on. It also makes your code or project easier to review. If you make a commit that includes multiple unrelated changes, it can be difficult to review the commit and understand what was changed. It can also make it more difficult to undo changes later on. For example, if you make a commit that includes a bug fix and a new feature, and then later decide that you want to remove the new feature, you will also have to undo the bug fix. If you had made separate commits for the bug fix and the new feature, you could simply undo the commit that added the new feature, without affecting the bug fix.
+
+  >> Commit Early, Commit Often: It is generally a good idea to make frequent commits. This allows you to save your work often, and it also makes it easier to undo changes later on. It also makes it easier to review your code, and it makes it easier to collaborate with others.
+
+  >> Commit Messages A commit message should describe the changes that were made in the commit. It should be short and descriptive, but it should also be detailed enough to convey what was changed. It should also be written in the Present-Tense imperative style, which means that it should be written as a command. For example, instead of writing "Changed the background color", you should write "Change the background color". This makes it easier to read and understand the message. Though the Git docs suggest using present-tense imperative messages, many developers prefer to use past-tense messages. All that matters is consistency, especially when working on a team with many people making commits.
+    - It is also important to be consistent with capitalization and punctuation. For example, if you use a period at the end of one commit message, you should use a period at the end of all commit messages.
+    - It is also a good idea to use a consistent format for commit messages. For example, you could start each commit message with a verb, such as "Add", "Change", or "Fix".
+    - You could also include a reference to a ticket number or issue number in the commit message, if your project uses a ticketing system. For example, you could write "Fix issue #123", or "Fix ticket #123". This makes it easier to track which commits are related to which tickets or issues.
+
+  >> Amending Commits:  Suppose you just made a commit and then realized you forgot to include a file! Or, maybe you made a typo in the commit message that you want to correct. Rather than making a brand new separate commit, you can "redo" the previous commit using the --amend option.
+    git commit -m "initial commit"
+    git add forgotten_file => this will add the forgotten file to the staging area
+    git commit --amend "same message or new message" => this will add the forgotten file to the previous commit and will not create a new commit
+
+  >> We can tell Git which files and directories to ignore in a given repository, using a .gitignore file. This is useful for files you know you NEVER want to commit, including:
+      Secrets, API keys, credentials, etc.
+      Operating System files (.DS_Store on Mac)
+      Log files
+      Dependencies & packages
+    Create a file called .gitignore in the root of a repository. Inside the file, we can write patterns to tell Git which files & folders to ignore:
+      .DS_Store => will ignore files named .DS_Store
+      folderName/ => will ignore an entire directory
+      *.log => will ignore any files with the .log extension
+
+> Branches: Branches are an essential part of Git! Think of branches as alternative timelines for a project. They enable us to create separate contexts where we can try new things, or even work on multiple ideas in parallel. If we make changes on one branch, they do not impact the other branches (unless we merge the changes)
+
+  >> Contexts: On large projects, we often work in multiple contexts:
+    - You're working on 2 different color scheme variations for your website at the same time, unsure of which you like best
+    - You're also trying to fix a horrible bug, but it's proving tough to solve. You need to really hunt around and toggle some code on and off to figure it out.
+    - A teammate is also working on adding a new chat widget to present at the next meeting. It's unclear if your company will end up using it.
+    - Another coworker is updating the search bar autocomplete.
+    - Another developer is doing an experimental radical design overhaul of the entire layout to present next month.
+
+  >> Master: In git, we are always working on a branch* The default branch name is master. It doesn't do anything special or have fancy powers. It's just like any other branch. Many people designate the master branch as their "source of truth" or the "official branch" for their codebase, but that is left to you to decide. From Git's perspective, the master branch is just like any other branch. It does not have to hold the "master copy" of your project. In 2020, Github renamed the default branch from master to main. The default Git branch name is still master, though the Git team is exploring a potential change.
+
+  >> HEAD -> Master: HEAD is simply a pointer that refers to the current "location" in your repository. It points to a particular branch reference.
+
+  >> git branch : List, create, or delete branches. the active branch will be marked with a star (*) in front of it. the default branch is master. the active branch is the branch that will be affected by git commands. Use git branch [branch-name] to make a new branch based upon the current HEAD This just creates the branch. It does not switch you to that branch (the HEAD stays the same)
+      git branch => list all branches in the repo
+      git branch branch_name => create a new branch with the name branch_name
+      git branch -d branch_name => delete the branch with the name branch_name
+      git branch -m old_branch_name new_branch_name => rename the branch with the name old_branch_name to new_branch_name
+
+  >> git switch : Switch branches or restore working tree files. switch is a new command that was added in Git 2.23.0. It is similar to the checkout command, but it is more intuitive and easier to use. It is recommended to use switch instead of checkout, unless you need to use a feature that is only available in checkout. switch is used to switch between branches. It can also be used to create a new branch and switch to it at the same time. It can also be used to delete a branch. switch is also used to restore files from the staging area to the working directory. This is similar to the checkout command, but it is more intuitive and easier to use.
+      git switch branch_name => switch to the branch with the name branch_name
+      git switch -c branch_name => create a new branch with the name branch_name and switch to it
+      git switch -d branch_name => delete the branch with the name branch_name
+      git switch - => switch to the previously checked out branch
+
